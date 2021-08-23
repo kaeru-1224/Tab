@@ -15,17 +15,21 @@ body{
 }
 .title>p{
     width: 80%;
+    padding: 5px;
 }
 .main{
     width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     flex-direction: column;
+    height: 80vh;
 }
+
 .btncontainer{
 width: 80%;
 display: flex;
+
 justify-content: flex-end;
 margin-top: 15px;}
 .content{
@@ -36,6 +40,7 @@ margin-top: 15px;}
     width: 80%;
     padding: 5px;
     margin: 0px;
+    background-color: white;
 }
 button{background-color: white;
     border: none;
@@ -68,12 +73,35 @@ img{width: 80%;
     border-radius: 15px;}
 .info{
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     justify-content: center;
     width: 50%;
-    background-color: white;
+
     border-radius: 0px 0px 10px 10px;
     text-align: center;
-    
-}
+    flex-wrap: nowrap;}
 
+.fill{
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+@media screen and (max-width:700px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .pic{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+        align-items: center;
+    }
+ button{
+     padding: 10px;
+ }
+
+}

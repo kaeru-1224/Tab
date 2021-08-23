@@ -48,21 +48,22 @@ const goals = document.querySelector(".goals");
 const content= document.querySelector(".content")
 //constains로 확인해서 포함되면 p에 넣어주면될것같음 
 //🤔만약에 진행이 된다면, 각각 한번씩해줘서 불필요해질것같음 
-//이전에  filter 해줬던거대로 하믄되지않을까,,? 아니시발 좀 마니 돌아갓네
-
+//이전에  filter 해줬던거대로 하믄되지않을까,,?
 //filter
 function filter(listname){
     let result= list.filter(
-        item => item.name==`${listname}`
-    )
+        item => item.name==`${listname}` )
+   
     let content2 = result.map(
         item=> 
-      `<p class="content">
+      `<p class="content fill">
       ${item.content}
       </p>`
     );
     content.innerHTML=content2.join("");
 } 
+
+//이걸,,이렇게해도...ㄱㅊ..?......ㅎ...
 window.addEventListener('DOMContentLoaded',filter("history"))
 history.addEventListener('click',e=> filter("history"))
 vision.addEventListener('click',e=> filter("vision"))
